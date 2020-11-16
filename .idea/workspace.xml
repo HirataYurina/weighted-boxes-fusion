@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fe75b4ef-035a-4c7b-b1c1-371d5ca14f30" name="Default Changelist" comment="" />
+    <list default="true" id="fe75b4ef-035a-4c7b-b1c1-371d5ca14f30" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/wighted-boxes-fusion.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wighted-boxes-fusion.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +22,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1i7XqEFPL7B4fRQVhKiXAzZ6rHr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -30,7 +35,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.boxes_wbf">
+  <component name="RunManager" selected="Python.diou_nms">
     <configuration name="boxes_wbf" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="wighted-boxes-fusion" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -45,6 +50,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/boxes_wbf.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="diou_nms" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="wighted-boxes-fusion" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/diou_nms.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -75,8 +102,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="util" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="wighted-boxes-fusion" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/util.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.diou_nms" />
+        <item itemvalue="Python.util" />
         <item itemvalue="Python.boxes_wbf" />
         <item itemvalue="Python.test" />
       </list>
@@ -105,6 +156,8 @@
       <option name="presentableId" value="Default" />
       <updated>1601259792148</updated>
       <workItem from="1601259794885" duration="12434000" />
+      <workItem from="1601277056960" duration="336000" />
+      <workItem from="1605492360837" duration="9699000" />
     </task>
     <servers />
   </component>
@@ -124,53 +177,55 @@
       <screen x="0" y="0" width="1549" height="832" />
     </state>
     <state width="859" height="466" key="DebuggerActiveHint/0.0.1549.832@0.0.1549.832" timestamp="1601272718577" />
-    <state width="1505" height="259" key="GridCell.Tab.0.bottom" timestamp="1601276811203">
+    <state width="1505" height="557" key="GridCell.Tab.0.bottom" timestamp="1605514584725">
       <screen x="0" y="0" width="1549" height="832" />
     </state>
-    <state width="1505" height="259" key="GridCell.Tab.0.bottom/0.0.1549.832@0.0.1549.832" timestamp="1601276811203" />
-    <state width="1505" height="259" key="GridCell.Tab.0.center" timestamp="1601276811203">
+    <state width="1505" height="557" key="GridCell.Tab.0.bottom/0.0.1549.832@0.0.1549.832" timestamp="1605514584725" />
+    <state width="1505" height="557" key="GridCell.Tab.0.center" timestamp="1605514584725">
       <screen x="0" y="0" width="1549" height="832" />
     </state>
-    <state width="1505" height="259" key="GridCell.Tab.0.center/0.0.1549.832@0.0.1549.832" timestamp="1601276811203" />
-    <state width="1505" height="259" key="GridCell.Tab.0.left" timestamp="1601276811203">
+    <state width="1505" height="557" key="GridCell.Tab.0.center/0.0.1549.832@0.0.1549.832" timestamp="1605514584725" />
+    <state width="1505" height="557" key="GridCell.Tab.0.left" timestamp="1605514584724">
       <screen x="0" y="0" width="1549" height="832" />
     </state>
-    <state width="1505" height="259" key="GridCell.Tab.0.left/0.0.1549.832@0.0.1549.832" timestamp="1601276811203" />
-    <state width="1505" height="259" key="GridCell.Tab.0.right" timestamp="1601276811203">
+    <state width="1505" height="557" key="GridCell.Tab.0.left/0.0.1549.832@0.0.1549.832" timestamp="1605514584724" />
+    <state width="1505" height="557" key="GridCell.Tab.0.right" timestamp="1605514584725">
       <screen x="0" y="0" width="1549" height="832" />
     </state>
-    <state width="1505" height="259" key="GridCell.Tab.0.right/0.0.1549.832@0.0.1549.832" timestamp="1601276811203" />
-    <state width="1505" height="382" key="GridCell.Tab.1.bottom" timestamp="1601273525681">
+    <state width="1505" height="557" key="GridCell.Tab.0.right/0.0.1549.832@0.0.1549.832" timestamp="1605514584725" />
+    <state width="1505" height="381" key="GridCell.Tab.1.bottom" timestamp="1605514558670">
       <screen x="0" y="0" width="1549" height="832" />
     </state>
-    <state width="1505" height="382" key="GridCell.Tab.1.bottom/0.0.1549.832@0.0.1549.832" timestamp="1601273525681" />
-    <state width="1505" height="382" key="GridCell.Tab.1.center" timestamp="1601273525681">
+    <state width="1505" height="381" key="GridCell.Tab.1.bottom/0.0.1549.832@0.0.1549.832" timestamp="1605514558670" />
+    <state width="1505" height="381" key="GridCell.Tab.1.center" timestamp="1605514558669">
       <screen x="0" y="0" width="1549" height="832" />
     </state>
-    <state width="1505" height="382" key="GridCell.Tab.1.center/0.0.1549.832@0.0.1549.832" timestamp="1601273525681" />
-    <state width="1505" height="382" key="GridCell.Tab.1.left" timestamp="1601273525681">
+    <state width="1505" height="381" key="GridCell.Tab.1.center/0.0.1549.832@0.0.1549.832" timestamp="1605514558669" />
+    <state width="1505" height="381" key="GridCell.Tab.1.left" timestamp="1605514558669">
       <screen x="0" y="0" width="1549" height="832" />
     </state>
-    <state width="1505" height="382" key="GridCell.Tab.1.left/0.0.1549.832@0.0.1549.832" timestamp="1601273525681" />
-    <state width="1505" height="382" key="GridCell.Tab.1.right" timestamp="1601273525681">
+    <state width="1505" height="381" key="GridCell.Tab.1.left/0.0.1549.832@0.0.1549.832" timestamp="1605514558669" />
+    <state width="1505" height="381" key="GridCell.Tab.1.right" timestamp="1605514558670">
       <screen x="0" y="0" width="1549" height="832" />
     </state>
-    <state width="1505" height="382" key="GridCell.Tab.1.right/0.0.1549.832@0.0.1549.832" timestamp="1601273525681" />
-    <state x="284" y="48" key="SettingsEditor" timestamp="1601273591401">
+    <state width="1505" height="381" key="GridCell.Tab.1.right/0.0.1549.832@0.0.1549.832" timestamp="1605514558670" />
+    <state x="284" y="48" key="SettingsEditor" timestamp="1605492673141">
       <screen x="0" y="0" width="1549" height="832" />
     </state>
-    <state x="284" y="48" key="SettingsEditor/0.0.1549.832@0.0.1549.832" timestamp="1601273591401" />
-    <state x="468" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1601277056768">
+    <state x="284" y="48" key="SettingsEditor/0.0.1549.832@0.0.1549.832" timestamp="1605492673141" />
+    <state x="468" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1605492566059">
       <screen x="0" y="0" width="1549" height="832" />
     </state>
-    <state x="468" y="240" key="com.intellij.ide.util.TipDialog/0.0.1549.832@0.0.1549.832" timestamp="1601277056768" />
+    <state x="468" y="240" key="com.intellij.ide.util.TipDialog/0.0.1549.832@0.0.1549.832" timestamp="1605492566059" />
     <state x="437" y="152" width="672" height="678" key="search.everywhere.popup" timestamp="1601273234260">
       <screen x="0" y="0" width="1549" height="832" />
     </state>
     <state x="437" y="152" width="672" height="678" key="search.everywhere.popup/0.0.1549.832@0.0.1549.832" timestamp="1601273234260" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/wighted_boxes_fusion$diou_nms.coverage" NAME="diou_nms Coverage Results" MODIFIED="1605514575240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/wighted_boxes_fusion$test.coverage" NAME="test Coverage Results" MODIFIED="1601272769062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/wighted_boxes_fusion$util.coverage" NAME="util Coverage Results" MODIFIED="1605494309138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/wighted_boxes_fusion$boxes_wbf.coverage" NAME="boxes_wbf Coverage Results" MODIFIED="1601273735435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

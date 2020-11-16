@@ -25,3 +25,13 @@
 <img src="/illustration/1.png" align="center" width="400">
 
 <img src="/illustration/2.png" align="center" width="300">
+
+# Soft NMS
+
+# Diou NMS
+
+#### ToDO
+
+* [x] Weighted NMS
+* [x] Soft NMS
+* [x] Diou NMS
