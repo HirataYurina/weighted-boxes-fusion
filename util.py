@@ -16,7 +16,8 @@ def cal_iou(box1, box2):
         box2: (n, 4[y1, x1, y2, x2]) a tensor
 
     Returns:
-        ious: (n,)
+        ious
+        dious
 
     """
     box1_min = box1[:2]
