@@ -8,12 +8,13 @@
 import tensorflow as tf
 
 
-def cal_iou(box1, box2):
+def cal_iou(box1, box2, beta=0.6):
     """calculate iou
 
     Args:
         box1: (4,) a tensor
         box2: (n, 4[y1, x1, y2, x2]) a tensor
+        beta: usually be 0.6
 
     Returns:
         ious
@@ -43,6 +44,6 @@ def cal_iou(box1, box2):
     diagonal_min = tf.minimum(box1_min, box2_min)
     diagonal_max = tf.maximum(box1_max, box2_max)
     diag_distance = tf.reduce_sum(tf.square(diagonal_min - diagonal_max))
-    dious = ious - center_distance / (diag_distance + tf.keras.backend.epsilon())
+    dious = ious - center_distance / tf.pow((diag_distance + tf.keras.backend.epsilon()), beta)
 
     return ious, dious
