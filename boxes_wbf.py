@@ -42,6 +42,7 @@ def compute_iou(fusion_box, boxes):
     return ious
 
 
+# TODO: test weighted nms in my projects
 def weighted_boxes_fusion(boxes,
                           iou_thres,
                           score_thres):

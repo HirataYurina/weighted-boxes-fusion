@@ -9,6 +9,7 @@ import tensorflow as tf
 from util import cal_iou
 
 
+# TODO: test diou nms in my projects
 def diou_nms(boxes,
              scores,
              max_output_size,

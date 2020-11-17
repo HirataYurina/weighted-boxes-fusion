@@ -10,6 +10,7 @@ from util import cal_iou
 import time
 
 
+# TODO: apply soft nms in my projects
 def soft_nms(boxes,
              scores,
              max_output_size,

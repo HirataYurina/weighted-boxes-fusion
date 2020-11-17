@@ -35,3 +35,5 @@
 * [x] Weighted NMS
 * [x] Soft NMS
 * [x] Diou NMS
+* [ ] fast nms
+* [ ] cluster nms
