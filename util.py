@@ -40,10 +40,10 @@ def cal_iou(box1, box2, beta=0.6):
 
     box1_center = (box1_min + box1_max) / 2.0
     box2_center = (box2_min + box2_max) / 2.0
-    center_distance = tf.reduce_sum(tf.square(box1_center - box2_center))
+    center_distance = tf.reduce_sum(tf.square(box1_center - box2_center), axis=-1)
     diagonal_min = tf.minimum(box1_min, box2_min)
     diagonal_max = tf.maximum(box1_max, box2_max)
-    diag_distance = tf.reduce_sum(tf.square(diagonal_min - diagonal_max))
-    dious = ious - center_distance / tf.pow((diag_distance + tf.keras.backend.epsilon()), beta)
+    diag_distance = tf.reduce_sum(tf.square(diagonal_min - diagonal_max), axis=-1)
+    dious = ious - tf.pow(center_distance / (diag_distance + tf.keras.backend.epsilon()), beta)
 
     return ious, dious

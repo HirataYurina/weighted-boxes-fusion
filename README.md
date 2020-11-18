@@ -30,6 +30,18 @@
 
 # Diou NMS
 
+> The logic in Diou NMS:
+>
+> 1. diou = iou - (d^2 / c^2)^beta，so diou is less than iou that lead to increase recall of model. But, how about precision of model? 
+>
+> 2. The central point distance between two boxes should also be considered in the suppression criterion.
+> 3. The optimal range of nms threshold in diou nms is wider than in original nms.
+
+**Experiment-1:**
+
+1. I use Diou NMS in my project, but the map descends and i don't know why.
+2. I find some bugs in my code because i forget setting axis=-1 in tf.reduce_sum(center_distance).
+
 #### ToDO
 
 * [x] Weighted NMS
