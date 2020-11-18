@@ -39,8 +39,11 @@
 
 **Experiment-1:**
 
-1. I use Diou NMS in my project, but the map descends and i don't know why.
+1. I use Diou NMS in my project, but the map descends significantly and i don't know why.
 2. I find some bugs in my code because i forget setting axis=-1 in tf.reduce_sum(center_distance).
+3. I fix the bugs and mAP is increasing.
+4. **Diou NMS is suitable for dense scene that has a lot of overlaps.**
+5. **In my project that the danger sources are not overlapping so diou nms does not elevate AP50.**
 
 #### ToDO
 
