@@ -14,9 +14,9 @@ def compute_iou(fusion_box, boxes):
     https://arxiv.org/abs/1910.13302
 
     Args:
-        fusion_box: (6,)
+        fusion_box: (5,)
                     np.array
-        boxes:      (n, 6)
+        boxes:      (n, 5)
                     np.array
 
     Returns:
@@ -107,12 +107,13 @@ def weighted_boxes_fusion(boxes,
         fusion_boxes = boxes[L[i]]  # (n, 5)
         scores_ = fusion_boxes[..., -1]  # (n,)
         location = fusion_boxes[..., :4]  # (n, 4)
-        score_mean = np.array([np.mean(scores_)])
+        # score_mean = np.array([np.mean(scores_)])
+        score_max = np.array([np.max(scores_)])
         weighted_location = location * scores_[:, np.newaxis]
         weighted_location_sum = np.sum(weighted_location, axis=0)
         scores_sum = np.sum(scores_)
         results_location = weighted_location_sum / scores_sum  # (4,)
-        results.append(np.concatenate([results_location, score_mean]))
+        results.append(np.concatenate([results_location, score_max]))
 
     return results
 
