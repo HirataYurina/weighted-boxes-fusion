@@ -71,51 +71,52 @@ def weighted_boxes_fusion(boxes,
     index_sorted = np.argsort(valid_scores)[::-1]  # (num_valid,)
     boxes_sorted = boxes[index_sorted]
 
-    selected_index = []
-
-    if len(F) == 0:
-        F.append(boxes_sorted[0])
-        L.append([0])
-        selected_index.append(0)
-
-    # remain index list
-    num_boxes = len(boxes_sorted)
-    remain_index = set(np.arange(num_boxes)) - set(selected_index)
-
-    while len(remain_index) > 0:
-        num_fusion = len(F)
-        index = np.array(list(remain_index))
-        remain_boxes = boxes_sorted[index]
-        ious = compute_iou(F[num_fusion - 1], remain_boxes)  # (n,)
-        matched_index = np.where(ious > iou_thres)[0]
-        if len(matched_index) > 0:
-            # add matched boxes to L at the pos position of F
-            matched_index = index[matched_index]
-            L[num_fusion - 1].extend(matched_index)
-            remain_index = remain_index - set(matched_index)
-        else:
-            # add matched boxes to the end of L and F
-            F.append(boxes_sorted[list(remain_index)[0]])
-            L.append([list(remain_index)[0]])
-            remain_index = remain_index - {list(remain_index)[0]}
-
-    # compute weighted location
     results = []
-    L = np.array(L, dtype=object)
-    num = len(F)
-    for i in range(num):
-        fusion_boxes = boxes[L[i]]  # (n, 5)
-        scores_ = fusion_boxes[..., -1]  # (n,)
-        location = fusion_boxes[..., :4]  # (n, 4)
-        # score_mean = np.array([np.mean(scores_)])
-        score_max = np.array([np.max(scores_)])
-        weighted_location = location * scores_[:, np.newaxis]
-        weighted_location_sum = np.sum(weighted_location, axis=0)
-        scores_sum = np.sum(scores_)
-        results_location = weighted_location_sum / scores_sum  # (4,)
-        results.append(np.concatenate([results_location, score_max]))
 
-    return results
+    if len(boxes_sorted) > 0:
+        selected_index = []
+
+        if len(F) == 0:
+            F.append(boxes_sorted[0])
+            L.append([index_sorted[0]])
+            selected_index.append(index_sorted[0])
+
+        # remain index list
+        remain_index = set(index_sorted) - set(selected_index)
+
+        while len(remain_index) > 0:
+            num_fusion = len(F)
+            index = np.array(list(remain_index))  # has sorted
+            remain_boxes = boxes[index]
+            ious = compute_iou(F[num_fusion - 1], remain_boxes)  # (n,)
+            matched_index = np.where(ious > iou_thres)[0]
+            if len(matched_index) > 0:
+                # add matched boxes to L at the pos position of F
+                matched_index = index[matched_index]
+                L[num_fusion - 1].extend(matched_index)
+                remain_index = remain_index - set(matched_index)
+            else:
+                # add matched boxes to the end of L and F
+                F.append(boxes[list(remain_index)[0]])
+                L.append([list(remain_index)[0]])
+                remain_index = remain_index - {list(remain_index)[0]}
+
+        # compute weighted location
+        L = np.array(L, dtype=object)
+        num = len(F)
+        for i in range(num):
+            fusion_boxes = boxes[np.array(L[i]).astype('int32')]  # (n, 5)
+            scores_ = fusion_boxes[..., -1]  # (n,)
+            location = fusion_boxes[..., :4]  # (n, 4)
+            # score_mean = np.array([np.mean(scores_)])
+            score_max = np.array([np.max(scores_)])
+            weighted_location = location * scores_[:, np.newaxis]
+            weighted_location_sum = np.sum(weighted_location, axis=0)
+            scores_sum = np.sum(scores_)
+            results_location = weighted_location_sum / scores_sum  # (4,)
+            results.append(np.concatenate([results_location, score_max]))
+
+    return np.array(results)
 
 
 if __name__ == '__main__':
